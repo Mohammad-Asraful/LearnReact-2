@@ -1,17 +1,34 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+const name = 'Asraf'
+const img1 = 'https://picsum.photos/200/300'
+const img2 = 'https://picsum.photos/250/300'
+const img3 = 'https://picsum.photos/300/300'
+const link = 'http://localhost:3001/'
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+const heading = {
+  color: '#fa9191',
+  textAlign: 'center',
+  textTransform: 'capitalize',
+  fonWeight: 'bold',
+  textShadow: '0px 2px 4px #ffe9c5',
+  margin: '70px 0',
+  fontFamily: '"Josefin Sans", sans-seri'
+}
+
+ReactDOM.render(
+  <>
+    <h1 style={heading}>My name is {name}</h1>
+    <div className='img_div'>
+      <img src={img1} alt='random images' />
+      <img src={img2} alt='random images' />
+      <a href={link} target={'_blank'} rel='noreferrer'>
+        <img src={img3} alt='random images' />
+      </a>
+    </div>
+  </>,
+  document.getElementById('root')
+
+)
